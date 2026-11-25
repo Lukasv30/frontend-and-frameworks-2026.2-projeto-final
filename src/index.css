@@ -1,0 +1,439 @@
+/* CSS simples e limpo — um arquivo só para o projeto inteiro. */
+
+:root {
+  --cor-fundo: #faf6f1;
+  --cor-superficie: #ffffff;
+  --cor-texto: #2b211b;
+  --cor-texto-suave: #6f6259;
+  --cor-borda: #e6dcd1;
+  --cor-principal: #6f4e37;
+  --cor-principal-escura: #553a28;
+  --cor-destaque: #c9772b;
+  --cor-perigo: #b3261e;
+  --cor-erro-fundo: #fdecea;
+  --raio: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--cor-principal);
+}
+
+h1,
+h3,
+p {
+  margin: 0;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  background: var(--cor-principal);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.header__logo {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.header__nav {
+  display: flex;
+  gap: 4px;
+}
+
+.header__link {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header__link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* O NavLink coloca a classe "active" sozinho na rota atual. */
+.header__link.active {
+  background: #fff;
+  color: var(--cor-principal-escura);
+  font-weight: 600;
+}
+
+.header__contador {
+  background: var(--cor-destaque);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Layout ---------- */
+
+.conteudo {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  flex: 1;
+}
+
+.titulo-pagina {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.rodape {
+  text-align: center;
+  padding: 16px;
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);
+  border-top: 1px solid var(--cor-borda);
+}
+
+/* ---------- Botões ---------- */
+
+.botao {
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--cor-principal);
+  border: 1px solid var(--cor-principal);
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.botao:hover {
+  background: var(--cor-principal-escura);
+}
+
+.botao--grande {
+  padding: 12px 22px;
+  font-size: 1.05rem;
+}
+
+.botao--secundario {
+  background: transparent;
+  color: var(--cor-principal);
+}
+
+.botao--secundario:hover {
+  background: #f1e8de;
+}
+
+.botao--perigo {
+  background: transparent;
+  color: var(--cor-perigo);
+  border-color: var(--cor-perigo);
+}
+
+.botao--perigo:hover {
+  background: var(--cor-erro-fundo);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+/* ---------- Cardápio: filtro e busca ---------- */
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filtro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filtro__botao {
+  font: inherit;
+  color: var(--cor-texto);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.filtro__botao:hover {
+  border-color: var(--cor-principal);
+}
+
+.filtro__botao--ativo {
+  background: var(--cor-principal);
+  border-color: var(--cor-principal);
+  color: #fff;
+  font-weight: 600;
+}
+
+.busca {
+  font: inherit;
+  color: var(--cor-texto);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 260px;
+}
+
+.contagem {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* ---------- Cardápio: lista de cards ---------- */
+
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card__emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.card__texto {
+  flex: 1;
+}
+
+.card__nome {
+  font-size: 1.05rem;
+}
+
+.card__descricao {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+.card__rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card__preco {
+  font-size: 1.1rem;
+}
+
+/* ---------- Carrinho e resumo ---------- */
+
+.lista-carrinho {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-carrinho {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+
+.item-carrinho__emoji {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.item-carrinho__texto {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-carrinho__unitario {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+.item-carrinho__quantidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.botao-quantidade {
+  font: inherit;
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  cursor: pointer;
+}
+
+.botao-quantidade:hover:not(:disabled) {
+  border-color: var(--cor-principal);
+}
+
+.botao-quantidade:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.item-carrinho__subtotal {
+  min-width: 90px;
+  text-align: right;
+}
+
+.resumo {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 16px;
+}
+
+.resumo__linha {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  color: var(--cor-texto-suave);
+}
+
+.resumo__linha--total {
+  color: var(--cor-texto);
+  font-size: 1.3rem;
+  border-top: 1px solid var(--cor-borda);
+  margin-top: 8px;
+  padding-top: 12px;
+}
+
+.resumo__linha--total:first-child {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 4px;
+}
+
+.resumo__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* ---------- Resumo do pedido ---------- */
+
+.pedido-confirmado {
+  background: var(--cor-superficie);
+  border: 2px dashed var(--cor-principal);
+  border-radius: var(--raio);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.pedido-confirmado__rotulo {
+  color: var(--cor-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.pedido-confirmado__numero {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--cor-principal-escura);
+}
+
+.pedido-confirmado__data {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+/* ---------- Mensagens ---------- */
+
+.mensagem {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.mensagem--erro {
+  background: var(--cor-erro-fundo);
+  border-color: var(--cor-perigo);
+  color: var(--cor-perigo);
+}

@@ -1,0 +1,29 @@
+// Dados do cardápio no formato de array de objetos (Capítulo 5).
+// Tema da equipe: CAFETERIA — categorias: cafés, bolos e salgados.
+//
+// Este array é a cópia local do cardápio. A tela de Cardápio tenta carregar
+// primeiro o arquivo public/cardapio.json com fetch (requisito extra); se o
+// carregamento falhar, ela mostra a mensagem de erro e usa este array.
+
+export const categorias = [
+  { id: 'cafe', nome: 'Cafés' },
+  { id: 'bolo', nome: 'Bolos' },
+  { id: 'salgado', nome: 'Salgados' },
+]
+
+export const cardapio = [
+  { id: 1, nome: 'Espresso', descricao: 'Café curto e encorpado (50 ml).', preco: 6, categoria: 'cafe', emoji: '☕' },
+  { id: 2, nome: 'Cappuccino', descricao: 'Espresso, leite vaporizado e canela.', preco: 12.5, categoria: 'cafe', emoji: '☕' },
+  { id: 3, nome: 'Café com Leite', descricao: 'Café coado com leite quente (200 ml).', preco: 8, categoria: 'cafe', emoji: '🥛' },
+  { id: 4, nome: 'Mocha Gelado', descricao: 'Espresso, chocolate, leite e gelo.', preco: 15, categoria: 'cafe', emoji: '🧊' },
+
+  { id: 5, nome: 'Bolo de Cenoura', descricao: 'Fatia com cobertura de chocolate.', preco: 9, categoria: 'bolo', emoji: '🥕' },
+  { id: 6, nome: 'Bolo de Chocolate', descricao: 'Fatia com recheio de brigadeiro.', preco: 10.5, categoria: 'bolo', emoji: '🍫' },
+  { id: 7, nome: 'Bolo de Rolo', descricao: 'Fatia do clássico pernambucano com goiabada.', preco: 8, categoria: 'bolo', emoji: '🍰' },
+  { id: 8, nome: 'Torta de Limão', descricao: 'Fatia com creme de limão e merengue.', preco: 11, categoria: 'bolo', emoji: '🍋' },
+
+  { id: 9, nome: 'Coxinha de Frango', descricao: 'Massa de batata com frango desfiado.', preco: 7.5, categoria: 'salgado', emoji: '🍗' },
+  { id: 10, nome: 'Pão de Queijo', descricao: 'Porção com 4 unidades, assados na hora.', preco: 6, categoria: 'salgado', emoji: '🧀' },
+  { id: 11, nome: 'Empada de Palmito', descricao: 'Massa amanteigada com recheio cremoso.', preco: 8.5, categoria: 'salgado', emoji: '🥧' },
+  { id: 12, nome: 'Croissant de Presunto e Queijo', descricao: 'Folhado, servido quente.', preco: 12, categoria: 'salgado', emoji: '🥐' },
+]
