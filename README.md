@@ -104,12 +104,9 @@ Depois abra o endereço que aparece no terminal (normalmente <http://localhost:5
 
 <!-- PREENCHER com os nomes dos integrantes antes de entregar. -->
 
-| Integrante | Papel | Responsabilidade principal |
+| Integrante | Matrícula | Papel |
 | --- | --- | --- |
-| _Nome do integrante 1_ | Interface e componentes | Componentes, JSX, props e estilos. |
-| _Nome do integrante 2_ | Estado e dados | `useState`, carrinho e uso de `map`, `filter` e `reduce`. |
-| _Nome do integrante 3_ | Rotas e documentação | React Router, README e documento final. |
-| _Nome do integrante 4 (se houver)_ | Revisão e testes | Revisa o código e testa o fluxo completo. |
+| Lucas Victor Silva | 01905921 | Interface e componentes, Estado e dados, Rotas e Dock |
 
 ## Gerar o .zip da entrega (sem `node_modules`)
 
