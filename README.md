@@ -1,4 +1,4 @@
-# Café do Campus · Cardápio Digital e Pedidos
+<img width="547" height="122" alt="image" src="https://github.com/user-attachments/assets/bdf35585-c43f-493c-abef-47966a5b56c1" /># Café do Campus · Cardápio Digital e Pedidos
 
 Projeto Final da disciplina **Front-End Frameworks** (UNINASSAU · ADS · 2º período · 2026.2).
 Prof. Flávio José Ferreira Júnior.
@@ -106,6 +106,8 @@ Depois abra o endereço que aparece no terminal (normalmente <http://localhost:5
 
 | Integrante | Matrícula | Papel |
 | --- | --- | --- |
-| Lucas Victor Silva | 01905921 | Interface e componentes, Estado e dados, Rotas e Dock |
+| Lucas Victor Silva | 01905921 | Interface e componentes, Estado e dados e Rotas |
+| Paulo Henrique Carneiro de Santana Filho | 01931311 | Documentação e Estrutura de Pastas |
+
 
 ---
