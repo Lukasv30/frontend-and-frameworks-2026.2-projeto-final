@@ -73,7 +73,7 @@ Depois abra o endereço que aparece no terminal (normalmente <http://localhost:5
 └── README.md
 ```
 
-## Requisitos obrigatórios — onde cada um está no código
+## Requisitos obrigatórios 
 
 | # | Requisito | Onde ver |
 | --- | --- | --- |
@@ -86,7 +86,7 @@ Depois abra o endereço que aparece no terminal (normalmente <http://localhost:5
 | 7 | Fluxo completo: adicionar, remover, total, finalizar e resumo com número | `adicionarItem`, `removerItem`, `total` e `finalizarPedido` em `CarrinhoProvider.jsx`; telas em `src/pages/` |
 | 8 | Roda com `npm install` e `npm run dev`; README explica | Seção "Como rodar" acima |
 
-## Requisitos extras (bônus)
+## Requisitos extras entregues
 
 | Extra | Onde ver |
 | --- | --- |
@@ -108,13 +108,4 @@ Depois abra o endereço que aparece no terminal (normalmente <http://localhost:5
 | --- | --- | --- |
 | Lucas Victor Silva | 01905921 | Interface e componentes, Estado e dados, Rotas e Dock |
 
-## Gerar o .zip da entrega (sem `node_modules`)
-
-Com tudo commitado, na pasta do projeto:
-
-```bash
-git archive --format=zip --output=../cardapio-digital-cafeteria.zip HEAD
-```
-
-O `git archive` só inclui os arquivos versionados, então `node_modules` fica de fora
-automaticamente (ela está no `.gitignore`).
+---
